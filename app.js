@@ -23,10 +23,10 @@ console.log(__dirname);
     options: Object.assign({}, opts)
   })
 
-  // fastify.register(AutoLoad, {
-  //   dir: path.join(__dirname, 'node_modules/puppeteer'),
-  //   options: Object.assign({}, opts)
-  // })
+  fastify.register(AutoLoad, {
+    dir: path.join(__dirname, 'utils'),
+    options: Object.assign({}, opts)
+  })
 
   // Make sure to call next when done
   next()
