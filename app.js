@@ -5,7 +5,7 @@ const AutoLoad = require('fastify-autoload')
 
 module.exports = function (fastify, opts, next) {
   // Place here your custom code!
-
+console.log(__dirname);
   // Do not touch the following lines
 
   // This loads all plugins defined in plugins
@@ -22,6 +22,11 @@ module.exports = function (fastify, opts, next) {
     dir: path.join(__dirname, 'services'),
     options: Object.assign({}, opts)
   })
+
+  // fastify.register(AutoLoad, {
+  //   dir: path.join(__dirname, 'node_modules/puppeteer'),
+  //   options: Object.assign({}, opts)
+  // })
 
   // Make sure to call next when done
   next()
