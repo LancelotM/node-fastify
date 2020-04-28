@@ -6,7 +6,7 @@ module.exports = function (fastify, opts, next) {
     reply.send(':this is an example111')
   })
 
-  fastify.get('/examplePuppeteer',async function (request, reply) {
+  fastify.get('/createTaoCommand',async function (request, reply) {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     page.setUserAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36")
